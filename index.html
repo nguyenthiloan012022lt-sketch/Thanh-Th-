@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>SO TÀI BÁ KHÍ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>SO TÀI BÁ KHÍ</h1>
+      <div class="stats">
+        <span id="levelText">Cấp 1</span>
+        <span id="auraText">Bá khí: 0</span>
+      </div>
+    </header>
+
+    <section class="menu" id="menu">
+      <h2>Chọn nhân vật</h2>
+      <div class="characters" id="characters">
+        <button class="char-btn active" data-char="0" aria-label="Nhân vật 1"><span class="sprite sprite-1"></span></button>
+        <button class="char-btn" data-char="1" aria-label="Nhân vật 2"><span class="sprite sprite-2"></span></button>
+        <button class="char-btn" data-char="2" aria-label="Nhân vật 3"><span class="sprite sprite-3"></span></button>
+        <button class="char-btn" data-char="3" aria-label="Con ếch"><span class="sprite sprite-4"></span></button>
+      </div>
+
+      <h2>Chọn cấp độ</h2>
+      <div class="levels" id="levels"></div>
+
+      <button id="startBtn" class="big-btn">BẮT ĐẦU</button>
+      <p class="hint">Máy tính: nhấn SPACE / click chuột. Điện thoại: chạm màn hình để đổi hướng bay.</p>
+    </section>
+
+    <section class="game-wrap hidden" id="gameWrap">
+      <canvas id="gameCanvas"></canvas>
+      <div class="hud">
+        <div class="progress"><div id="progressBar"></div></div>
+        <button id="quitBtn" class="small-btn">Thoát</button>
+      </div>
+    </section>
+
+    <section class="overlay hidden" id="loseOverlay">
+      <div class="card lose-card">
+        <img src="assets/lose.jpg" alt="Ảnh thua cuộc" />
+        <h2>cho chơi lại đi mòa</h2>
+        <button id="retryBtn" class="big-btn">CHƠI LẠI</button>
+        <button id="menuBtn1" class="small-btn">Về menu</button>
+      </div>
+    </section>
+
+    <section class="overlay hidden" id="winOverlay">
+      <canvas id="fireworksCanvas"></canvas>
+      <div class="card win-card">
+        <img id="winImage" src="assets/win.jpg" alt="Ảnh chiến thắng" onerror="this.style.display='none'" />
+        <h2>VỀ ĐÍCH!</h2>
+        <div class="plus-aura">+1 BÁ KHÍ</div>
+        <button id="nextBtn" class="big-btn">CẤP TIẾP THEO</button>
+        <button id="menuBtn2" class="small-btn">Về menu</button>
+      </div>
+    </section>
+  </main>
+
+  <video id="music" src="assets/music.mp4" preload="auto" loop playsinline></video>
+  <script src="game.js"></script>
+</body>
+</html>
