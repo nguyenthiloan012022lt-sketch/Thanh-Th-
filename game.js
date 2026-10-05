@@ -20,7 +20,7 @@ let player, walls = [], nextWallAt = 0;
 let charImg = new Image();
 charImg.src = 'characters.jpg';
 let bgImg = new Image();
-bgImg.src = 'assets/background.jpg';
+bgImg.src = 'background.jpg';  
 
 auraText.textContent = `Bá khí: ${aura}`;
 
