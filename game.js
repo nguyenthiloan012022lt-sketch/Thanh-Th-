@@ -18,7 +18,7 @@ let last = 0;
 let distance = 0;
 let player, walls = [], nextWallAt = 0;
 let charImg = new Image();
-charImg.src = 'assets/characters.jpg';
+charImg.src = 'characters.jpg';
 let bgImg = new Image();
 bgImg.src = 'assets/background.jpg';
 
