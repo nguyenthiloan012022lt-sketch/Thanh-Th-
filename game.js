@@ -8,7 +8,7 @@ const music = document.getElementById('music');
 const progressBar = document.getElementById('progressBar');
 const levelText = document.getElementById('levelText');
 const auraText = document.getElementById('auraText');
-
+const LEVELS = Array.from({length:15},(_,i)=>({
 let selectedChar = 0;
 let selectedLevel = 1;
 let aura = Number(localStorage.getItem('soTaiBaKhiAura') || 0);
